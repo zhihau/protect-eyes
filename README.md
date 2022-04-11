@@ -5,6 +5,7 @@
 	- | Function | Description |
 	  |---|---|
 	  | `esc` | Exit the program. |
+	  |`ctrl-esc`|Suspend / Resume the program.|
 - ### :film_projector:Demo
   ![protect-eye-demo.gif](./assets/protect-eye-demo_1649561658472_0.gif)
 - ### :comet:Download
