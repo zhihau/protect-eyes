@@ -1,8 +1,10 @@
 #SingleInstance force	; force the script to reload when the app is started again
 #Persistent
+;Global variable
+ToolTipText = Text
 ; Work 20minutes
 Timer = 1200000
-;Timer = 1000
+;Timer = 10000
 SetTimer ShowScreen, %Timer%
 return
 
@@ -44,3 +46,41 @@ Return
 GuiEscape:			; if you press escape in the gui
 
 	exitapp			; the program exits
+
+^esc::
+Suspend
+if (A_IsSuspended)
+{
+	;Hotkeys have been suspended
+    ToolTipText = :‑( Suspend protect-eye!
+    Gosub, ShowTransparencyToolTip
+}else{
+	;Alert!, All hotkeys are now active!
+    ToolTipText = :‑D Resume protect-eye!
+    Gosub, ShowTransparencyToolTip
+}
+Pause,,1
+Gui % (MainGui:=!MainGui) ? "Hide" : "Show"
+Return
+
+ShowTransparencyToolTip:
+   ToolTip, %ToolTipText%
+   MouseGetPos, MouseX0, MouseY0
+   SetTimer, RemoveToolTip
+Return
+
+RemoveToolTip:
+   If A_TimeIdle < 1000
+   {
+      MouseGetPos, MouseX, MouseY
+      If MouseX = %MouseX0%
+      {
+         If MouseY = %MouseY0%
+         {
+            Return
+         }
+      }
+   }
+   SetTimer, RemoveToolTip, Off
+   ToolTip
+Return

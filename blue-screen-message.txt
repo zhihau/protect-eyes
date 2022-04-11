@@ -1,0 +1,22 @@
+A problem has been detected and Windows has been shut down to prevent damage
+to your computer.
+
+UNMOUTABLE_BOOT_VALUME
+
+If this is the first time you've seen this error screen,
+restart your computer. If this screen appears again, follow
+these steps:
+
+Check to make sure any new hardware or software is properly installted.
+If this is a new installation, ask your hardware of software manufacturer
+for any Windows updates you might need.
+
+If problems continue, disable of remove any newly installed hardware
+of software. Disable BIOS memory options such as caching or shadowing.
+If you need to use Safe Mode to remove or disable components, restart
+your computer, press F8 to select Advanded Startup Options, and then 
+select Save Mode.
+
+Technical Information:
+
+*** STOP: 0x000000ED (0x80F128D0, 0xc000009c, 0x00000000, 0x00000000)
