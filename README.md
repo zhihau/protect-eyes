@@ -1,5 +1,6 @@
 - ## protect-eyes
 	- A utility that implements  [20-20-20](https://www.healthline.com/health/eye-health/20-20-20-rule#definition) rule. It shows blue screen death GUI every 20 minutes to remind you take a break. Look 20 feet away at something for 20 seconds. It works on Windows 10.
+	- Read more [Why should I create a program to protect my eyes?](https://zhihaushiu.medium.com/why-should-i-create-a-program-to-protect-my-eyes-8dcb63bc8122?sk=4eb609f682a421bb3526a2479d2ac015)
 - ### :crossed_swords:Functions
 	- | Function | Description |
 	  |---|---|
